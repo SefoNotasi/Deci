@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="style_text_norm">
+        <item name="android:textSize">@dimen/size_text_norm</item>
+    </style>
+
+    <style name="style_text_header">
+        <item name="android:textSize">@dimen/size_text_norm</item>
+        <item name="android:textColor">@color/lime_200</item>
+    </style>
+</resources>

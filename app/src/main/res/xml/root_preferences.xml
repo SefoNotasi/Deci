@@ -1,0 +1,115 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory>
+        <ListPreference
+            android:icon="@drawable/ic_baseline_language_24"
+            app:defaultValue="@string/key_lang_system"
+            app:entries="@array/setting_lang_entries"
+            app:entryValues="@array/setting_lang_values"
+            app:isPreferenceVisible="false"
+            app:key="@string/key_setting_lang"
+            app:title="@string/setting_lang_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:icon="@drawable/ic_baseline_light_mode_24"
+            app:defaultValue="@string/key_theme_auto"
+            app:entries="@array/setting_theme_entries"
+            app:entryValues="@array/setting_theme_values"
+            app:key="@string/key_setting_theme"
+            app:title="@string/setting_theme_title"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <SwitchPreferenceCompat
+        android:icon="@drawable/ic_baseline_error_24"
+        app:defaultValue="true"
+        app:key="@string/key_setting_tips"
+        app:title="@string/setting_tips" />
+
+    <SwitchPreferenceCompat
+        android:icon="@drawable/ic_baseline_music_note_24"
+        app:defaultValue="true"
+        app:key="@string/key_setting_sound"
+        app:summary="@string/setting_sound_summary"
+        app:title="@string/setting_sound_title" />
+
+    <PreferenceCategory app:title="@string/setting_vibro_header">
+        <SwitchPreferenceCompat
+            android:icon="@drawable/ic_baseline_vibration_24"
+            app:defaultValue="true"
+            app:key="@string/key_setting_vibro"
+            app:title="@string/setting_vibro_title" />
+
+        <SeekBarPreference
+            android:max="255"
+            app:defaultValue="100"
+            app:dependency="@string/key_setting_vibro"
+            app:key="@string/key_setting_vibro_force"
+            app:min="1"
+            app:title="@string/setting_vibro_force" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/setting_shake_header">
+        <SwitchPreferenceCompat
+            android:icon="@drawable/ic_baseline_edgesensor_high_24"
+            app:defaultValue="true"
+            app:key="@string/key_setting_shake"
+            app:title="@string/setting_shake_title" />
+
+        <SeekBarPreference
+            android:max="10"
+            app:defaultValue="5"
+            app:dependency="@string/key_setting_shake"
+            app:key="@string/key_setting_shake_sense"
+            app:min="1"
+            app:title="@string/setting_shake_sense" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/setting_info">
+        <Preference
+            android:icon="@drawable/ic_baseline_web_24"
+            app:summary="@string/setting_site_summary"
+            app:title="@string/setting_site_title">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/link_site" />
+        </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_baseline_email_24"
+            app:summary="@string/setting_mail_summary"
+            app:title="@string/setting_mail_title">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/link_mail" />
+        </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_baseline_coffee_24"
+            app:isPreferenceVisible="false"
+            app:key="@string/key_setting_support"
+            app:summary="@string/setting_support_summary"
+            app:title="@string/setting_support_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/setting_app">
+        <Preference
+            android:icon="@drawable/ic_baseline_refresh_24"
+            app:key="@string/key_setting_refresh"
+            app:title="@string/setting_refresh" />
+
+        <Preference
+            android:icon="@drawable/ic_baseline_restore_24"
+            app:key="@string/key_setting_restore"
+            app:title="@string/setting_restore" />
+
+        <Preference
+            android:icon="@drawable/ic_baseline_build_24"
+            app:key="@string/key_setting_version"
+            app:title="@string/setting_version" />
+    </PreferenceCategory>
+</PreferenceScreen>

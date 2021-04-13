@@ -1,0 +1,25 @@
+<resources>
+    <string-array name="setting_lang_entries">
+        <item>@string/setting_lang_system</item>
+        <item>@string/setting_lang_en</item>
+        <item>@string/setting_lang_ru</item>
+    </string-array>
+
+    <string-array name="setting_lang_values">
+        <item>@string/key_lang_system</item>
+        <item>@string/key_lang_en</item>
+        <item>@string/key_lang_ru</item>
+    </string-array>
+
+    <string-array name="setting_theme_entries">
+        <item>@string/setting_theme_auto</item>
+        <item>@string/setting_theme_day</item>
+        <item>@string/setting_theme_night</item>
+    </string-array>
+
+    <string-array name="setting_theme_values">
+        <item>@string/key_theme_auto</item>
+        <item>@string/key_theme_day</item>
+        <item>@string/key_theme_night</item>
+    </string-array>
+</resources>

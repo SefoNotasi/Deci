@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ru.notasi.deci.MainActivity">
+
+    <item
+        android:id="@+id/nav_coin"
+        android:icon="@drawable/ic_menu_coin"
+        android:title="@string/menu_coin" />
+
+    <item
+        android:id="@+id/nav_board"
+        android:icon="@drawable/ic_menu_progress"
+        android:title="@string/menu_board" />
+
+    <item
+        android:id="@+id/nav_info"
+        android:icon="@drawable/ic_menu_info"
+        android:title="@string/menu_info" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_menu_settings"
+        android:title="@string/menu_settings" />
+</menu>

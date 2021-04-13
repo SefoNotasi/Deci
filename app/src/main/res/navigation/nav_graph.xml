@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_coin">
+
+    <fragment
+        android:id="@+id/nav_coin"
+        android:name="ru.notasi.deci.CoinFragment"
+        tools:layout="@layout/fragment_coin" />
+
+    <fragment
+        android:id="@+id/nav_board"
+        android:name="ru.notasi.deci.BoardFragment"
+        tools:layout="@layout/fragment_board" />
+
+    <fragment
+        android:id="@+id/nav_info"
+        android:name="ru.notasi.deci.InfoFragment"
+        tools:layout="@layout/fragment_info" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="ru.notasi.deci.SettingsFragment"
+        tools:layout="@xml/root_preferences" />
+</navigation>

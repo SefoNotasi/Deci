@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_200">#6CFF47</color>
+    <color name="green_500">#21a038</color>
+    <color name="green_700">#158000</color>
+    <color name="lime_200">#02D909</color>
+    <color name="lime_700">#188701</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="brand">#21a038</color>
+</resources>

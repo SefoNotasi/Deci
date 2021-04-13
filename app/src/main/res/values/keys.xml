@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="key_setting_lang" translatable="false">Setting language</string>
+    <string name="key_setting_theme" translatable="false">Setting theme</string>
+    <string name="key_setting_tips" translatable="false">Setting tips</string>
+    <string name="key_setting_sound" translatable="false">Setting sound</string>
+    <string name="key_setting_vibro" translatable="false">Setting vibration</string>
+    <string name="key_setting_vibro_force" translatable="false">Setting vibration force</string>
+    <string name="key_setting_shake" translatable="false">Setting shake</string>
+    <string name="key_setting_shake_sense" translatable="false">Setting shake sensitivity</string>
+    <string name="key_setting_support" translatable="false">Setting support</string>
+    <string name="key_setting_refresh" translatable="false">Setting refresh</string>
+    <string name="key_setting_restore" translatable="false">Setting restore</string>
+    <string name="key_setting_version" translatable="false">Setting version</string>
+
+    <string name="key_lang_system" translatable="false">Language system</string>
+    <string name="key_lang_en" translatable="false">en</string>
+    <string name="key_lang_ru" translatable="false">ru</string>
+
+    <string name="key_theme_auto" translatable="false">Theme auto</string>
+    <string name="key_theme_day" translatable="false">Theme day</string>
+    <string name="key_theme_night" translatable="false">Theme night</string>
+</resources>

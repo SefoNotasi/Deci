@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_flips">Всего бросков</string>
+    <string name="text_heads">Орёл</string>
+    <string name="text_tails">Решка</string>
+    <string name="text_edges">Ребро</string>
+    <string name="text_last">Последний бросок</string>
+    <string name="text_level">Уровень</string>
+    <string name="text_experience">Опыт</string>
+    <string name="text_skins">Вид монеты</string>
+    <string name="text_last_heads">выпал орёл</string>
+    <string name="text_last_tails">выпала решка</string>
+    <string name="text_last_edge">невероятно, выпало ребро</string>
+    <string name="text_share_flip">Монета подброшена — %1$s.%2$s</string>
+    <string name="text_share_stats">Монета подброшена — делюсь результатом.\nВсего бросков: %1$d\nОрёл: %2$d\nРешка: %3$d\nРебро: %4$d\nПоследний бросок: %5$s\nУровень: %6$d\nОпыт: %7$d/%8$d%9$s</string>
+    <string name="text_share_ad">\n\nИспытать удачу в Android приложении Deci\n%1$s</string>
+
+    <string name="count_experience">%1$d / %2$d</string>
+
+    <string name="snack_auto_on">Теперь нельзя подбросить монету вручную</string>
+    <string name="snack_auto_off">Теперь можно подбросить монету вручную</string>
+    <string name="snack_level">Достигнут %1$d уровень</string>
+    <string name="snack_skin">Достигнут %1$d уровень. Доступен новый вид монеты.</string>
+    <string name="snack_stats">Сбросить весь прогресс безвозвратно?</string>
+    <string name="snack_settings">Восстановить настройки по умолчанию?</string>
+    <string name="snack_yes">Да</string>
+
+    <string name="button_auto">Авто-бросок вкл</string>
+    <string name="button_reset">Сбросить прогресс</string>
+
+    <string name="radio_silver">Серебро</string>
+    <string name="radio_gold">Золото</string>
+    <string name="radio_cobalt">Кобальт</string>
+    <string name="radio_mithril">Мифрил</string>
+    <string name="radio_orichalc">Орихалк</string>
+    <string name="radio_adamant">Адамант</string>
+    <string name="radio_luminite">Люминит</string>
+
+    <string name="toast_heads">Орёл</string>
+    <string name="toast_tails">Решка</string>
+    <string name="toast_edge">Ребро</string>
+    <string name="toast_sound_on">Звуки ВКЛ</string>
+    <string name="toast_sound_off">Звуки ВЫКЛ</string>
+    <string name="toast_shake_on">Встряска для броска ВКЛ</string>
+    <string name="toast_shake_off">Встряска для броска ВЫКЛ</string>
+    <string name="toast_reset">Прогресс сброшен</string>
+    <string name="toast_refresh">Интерфейс обновлён</string>
+    <string name="toast_restore">Настройки восстановлены</string>
+    <string name="toast_more">Ещё разок</string>
+    <string name="toast_extra">Deci — означает Решение (Decision)</string>
+
+    <string name="describe_coin">Изображение монеты</string>
+    <string name="describe_share">Кнопка поделиться</string>
+    <string name="describe_auto">Кнопка авто-броска</string>
+    <string name="describe_action">Кнопка действия</string>
+    <string name="describe_sound">Кнопка звука</string>
+    <string name="describe_shake">Кнопка встряски</string>
+
+    <string name="menu_coin">Монета</string>
+    <string name="menu_board">Прогресс</string>
+    <string name="menu_info">Инфо</string>
+    <string name="menu_settings">Настройки</string>
+
+    <string name="setting_lang_title">Язык</string>
+    <string name="setting_lang_system">Системный</string>
+    <string name="setting_lang_en">Английский</string>
+    <string name="setting_lang_ru">Русский</string>
+    <string name="setting_theme_title">Тема</string>
+    <string name="setting_theme_auto">Системная</string>
+    <string name="setting_theme_day">Дневная</string>
+    <string name="setting_theme_night">Ночная</string>
+    <string name="setting_tips">Всплывающие подсказки</string>
+    <string name="setting_sound_title">Звуки монеты</string>
+    <string name="setting_sound_summary">Регулируются клавишами громкости</string>
+    <string name="setting_vibro_header">Вибрация</string>
+    <string name="setting_vibro_title">Вибрация при броске</string>
+    <string name="setting_vibro_force">Мощность</string>
+    <string name="setting_shake_header">Встряска</string>
+    <string name="setting_shake_title">Встряхнуть для броска</string>
+    <string name="setting_shake_sense">Сила тряски для срабатывания</string>
+    <string name="setting_info">Обратная связь</string>
+    <string name="setting_site_title">Открыть сайт</string>
+    <string name="setting_mail_title">Отправить письмо</string>
+    <string name="setting_support_title">Поддержка</string>
+    <string name="setting_support_summary">Угостить меня кофе</string>
+    <string name="setting_app">Приложение</string>
+    <string name="setting_refresh">Обновить интерфейс</string>
+    <string name="setting_restore">Восстановить настройки</string>
+    <string name="setting_version">Версия</string>
+
+    <string name="link_app">https://Notasi.ru/deci</string>
+</resources>

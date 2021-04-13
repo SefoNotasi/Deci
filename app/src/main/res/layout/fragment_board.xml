@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BoardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_full">
+
+        <RelativeLayout
+            android:id="@+id/view_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/style_text_norm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/view_text_flips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/margin_full"
+                android:layout_toStartOf="@id/view_count_flips"
+                android:layout_toLeftOf="@id/view_count_flips"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/text_flips" />
+
+            <TextView
+                android:id="@+id/view_text_heads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_text_flips"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/margin_full"
+                android:layout_toStartOf="@id/view_count_heads"
+                android:layout_toLeftOf="@id/view_count_heads"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/text_heads" />
+
+            <TextView
+                android:id="@+id/view_text_tails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_text_heads"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/margin_full"
+                android:layout_toStartOf="@id/view_count_tails"
+                android:layout_toLeftOf="@id/view_count_tails"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/text_tails" />
+
+            <TextView
+                android:id="@+id/view_text_edges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_text_tails"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/margin_full"
+                android:layout_toStartOf="@id/view_count_edges"
+                android:layout_toLeftOf="@id/view_count_edges"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/text_edges" />
+
+            <TextView
+                android:id="@+id/view_text_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_text_edges"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/margin_full"
+                android:layout_toStartOf="@id/view_count_last"
+                android:layout_toLeftOf="@id/view_count_last"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/text_last" />
+
+            <TextView
+                android:id="@+id/view_text_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_text_last"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/margin_full"
+                android:layout_toStartOf="@id/view_count_level"
+                android:layout_toLeftOf="@id/view_count_level"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/text_level" />
+
+            <TextView
+                android:id="@+id/view_text_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_text_level"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toStartOf="@id/view_count_experience"
+                android:layout_toLeftOf="@id/view_count_experience"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/text_experience" />
+
+            <TextView
+                android:id="@+id/view_count_flips"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_full"
+                tools:text="111" />
+
+            <TextView
+                android:id="@+id/view_count_heads"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_count_flips"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_full"
+                tools:text="222" />
+
+            <TextView
+                android:id="@+id/view_count_tails"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_count_heads"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_full"
+                tools:text="333" />
+
+            <TextView
+                android:id="@+id/view_count_edges"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_count_tails"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_full"
+                tools:text="444" />
+
+            <TextView
+                android:id="@+id/view_count_last"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_count_edges"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_full"
+                tools:text="heads" />
+
+            <TextView
+                android:id="@+id/view_count_level"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_count_last"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_full"
+                tools:text="555" />
+
+            <TextView
+                android:id="@+id/view_count_experience"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_count_level"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                tools:text="666 / 777" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/header_skins"
+            style="@style/style_text_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_section"
+            android:text="@string/text_skins"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_stats" />
+
+        <RadioGroup
+            android:id="@+id/radio_skins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/style_text_norm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_skins">
+
+            <RadioButton
+                android:id="@+id/radio_silver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:enabled="true"
+                android:text="@string/radio_silver" />
+
+            <RadioButton
+                android:id="@+id/radio_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:enabled="false"
+                android:text="@string/radio_gold" />
+
+            <RadioButton
+                android:id="@+id/radio_cobalt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:enabled="false"
+                android:text="@string/radio_cobalt" />
+
+            <RadioButton
+                android:id="@+id/radio_mithril"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:enabled="false"
+                android:text="@string/radio_mithril" />
+
+            <RadioButton
+                android:id="@+id/radio_orichalc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:enabled="false"
+                android:text="@string/radio_orichalc" />
+
+            <RadioButton
+                android:id="@+id/radio_adamant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:enabled="false"
+                android:text="@string/radio_adamant" />
+
+            <RadioButton
+                android:id="@+id/radio_luminite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:enabled="false"
+                android:text="@string/radio_luminite" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_section"
+            android:text="@string/button_reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_skins" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

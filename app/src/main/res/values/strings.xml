@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name" translatable="false">Deci</string>
+
+    <string name="text_flips">Total flips</string>
+    <string name="text_heads">Heads</string>
+    <string name="text_tails">Tails</string>
+    <string name="text_edges">Edge</string>
+    <string name="text_last">Last flip</string>
+    <string name="text_level">Level</string>
+    <string name="text_experience">Experience</string>
+    <string name="text_skins">Coin skins</string>
+    <string name="text_last_heads">it came up heads</string>
+    <string name="text_last_tails">it came up tails</string>
+    <string name="text_last_edge">unbelievable, it came up edge</string>
+    <string name="text_share_flip">Coin flipped — %1$s.%2$s</string>
+    <string name="text_share_stats">Coin flipped — sharing my stats.\nTotal flips: %1$d\nHeads: %2$d\nTails: %3$d\nEdge: %4$d\nLast flip: %5$s\nLevel: %6$d\nExperience: %7$d/%8$d%9$s</string>
+    <string name="text_share_ad">\n\nTry your luck on the Deci Android app\n%1$s</string>
+
+    <string name="count_experience">%1$d / %2$d</string>
+
+    <string name="snack_auto_on">Now you can\'t manually flip a coin</string>
+    <string name="snack_auto_off">Now you can manually flip a coin</string>
+    <string name="snack_level">Level %1$d reached</string>
+    <string name="snack_skin">Level %1$d reached. New skin available.</string>
+    <string name="snack_stats">Reset all progress permanently?</string>
+    <string name="snack_settings">Restore default settings?</string>
+    <string name="snack_yes">Yes</string>
+
+    <string name="button_auto">Auto-flip on</string>
+    <string name="button_reset">Reset progress</string>
+
+    <string name="radio_silver">Silver</string>
+    <string name="radio_gold">Gold</string>
+    <string name="radio_cobalt">Cobalt</string>
+    <string name="radio_mithril">Mithril</string>
+    <string name="radio_orichalc">Orichalc</string>
+    <string name="radio_adamant">Adamant</string>
+    <string name="radio_luminite">Luminite</string>
+
+    <string name="toast_heads">Heads</string>
+    <string name="toast_tails">Tails</string>
+    <string name="toast_edge">Edge</string>
+    <string name="toast_sound_on">Sounds ON</string>
+    <string name="toast_sound_off">Sounds OFF</string>
+    <string name="toast_shake_on">Shake to flip ON</string>
+    <string name="toast_shake_off">Shake to flip OFF</string>
+    <string name="toast_reset">Progress reset</string>
+    <string name="toast_refresh">Interface refreshed</string>
+    <string name="toast_restore">Settings restored</string>
+    <string name="toast_more">One more time</string>
+    <string name="toast_extra">Deci — means Decision</string>
+
+    <string name="describe_coin">Coin image</string>
+    <string name="describe_share">Share button</string>
+    <string name="describe_auto">Auto-flip button</string>
+    <string name="describe_action">Action button</string>
+    <string name="describe_sound">Sound button</string>
+    <string name="describe_shake">Shake button</string>
+
+    <string name="menu_coin">Coin</string>
+    <string name="menu_board">Progress</string>
+    <string name="menu_info">Info</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="setting_lang_title">Language</string>
+    <string name="setting_lang_system">System</string>
+    <string name="setting_lang_en">English</string>
+    <string name="setting_lang_ru">Russian</string>
+    <string name="setting_theme_title">Theme</string>
+    <string name="setting_theme_auto">Auto</string>
+    <string name="setting_theme_day">Day</string>
+    <string name="setting_theme_night">Night</string>
+    <string name="setting_tips">Tooltips</string>
+    <string name="setting_sound_title">Flip sounds</string>
+    <string name="setting_sound_summary">Adjustable by volume keys</string>
+    <string name="setting_vibro_header">Vibration</string>
+    <string name="setting_vibro_title">Flip vibration</string>
+    <string name="setting_vibro_force">Force</string>
+    <string name="setting_shake_header">Shake</string>
+    <string name="setting_shake_title">Shake to flip</string>
+    <string name="setting_shake_sense">Shaking force to detect</string>
+    <string name="setting_info">Feedback</string>
+    <string name="setting_site_title">Open website</string>
+    <string name="setting_site_summary" translatable="false">Notasi.ru</string>
+    <string name="setting_mail_title">Send email</string>
+    <string name="setting_mail_summary" translatable="false">SefoNotasi@gmail.com</string>
+    <string name="setting_support_title">Support</string>
+    <string name="setting_support_summary">Buy me a coffee</string>
+    <string name="setting_app">App</string>
+    <string name="setting_refresh">Refresh interface</string>
+    <string name="setting_restore">Restore settings</string>
+    <string name="setting_version">Version</string>
+
+    <string name="link_app">https://Notasi.ru/deci/en</string>
+    <string name="link_store" translatable="false">https://play.google.com/store/apps/details?id=ru.notasi.deci</string>
+    <string name="link_site" translatable="false">https://Notasi.ru</string>
+    <string name="link_mail" translatable="false">mailto:SefoNotasi@gmail.com</string>
+</resources>
