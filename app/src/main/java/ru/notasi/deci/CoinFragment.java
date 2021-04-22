@@ -455,25 +455,29 @@ public class CoinFragment extends Fragment {
     }
 
     private void playSound(int side) {
-        mSoundPool.autoPause();
-        float mSoundVolume = mRepo.getVolume();
-        switch (side) {
-            case 1:
-                mSoundPool.play(mSoundHeads, mSoundVolume, mSoundVolume, 0, 0, 1);
-                break;
-            case 2:
-                mSoundPool.play(mSoundTails, mSoundVolume, mSoundVolume, 0, 0, 1);
-                break;
-            case 3:
-                mSoundPool.play(mSoundEdge, mSoundVolume, mSoundVolume, 0, 0, 1);
-                break;
+        if (mSoundPool != null) {
+            mSoundPool.autoPause();
+            float mSoundVolume = mRepo.getVolume();
+            switch (side) {
+                case 1:
+                    mSoundPool.play(mSoundHeads, mSoundVolume, mSoundVolume, 0, 0, 1);
+                    break;
+                case 2:
+                    mSoundPool.play(mSoundTails, mSoundVolume, mSoundVolume, 0, 0, 1);
+                    break;
+                case 3:
+                    mSoundPool.play(mSoundEdge, mSoundVolume, mSoundVolume, 0, 0, 1);
+                    break;
+            }
+        } else {
+            // TODO: Log or createSoundPool();
         }
     }
 
     private void createSoundPool() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             AudioAttributes audioAttributes = new AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+                    .setUsage(AudioAttributes.USAGE_MEDIA) // USAGE_ASSISTANCE_SONIFICATION
                     .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
                     .build();
 
@@ -481,12 +485,12 @@ public class CoinFragment extends Fragment {
                     .setAudioAttributes(audioAttributes)
                     .build();
         } else {
-            mSoundPool = new SoundPool(1, AudioManager.STREAM_NOTIFICATION, 0);
+            mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0); // STREAM_NOTIFICATION
         }
 
         mSoundHeads = mSoundPool.load(mActivity, R.raw.sound_heads, 1);
         mSoundTails = mSoundPool.load(mActivity, R.raw.sound_tails, 1);
         mSoundEdge = mSoundPool.load(mActivity, R.raw.sound_edge, 1);
-        mActivity.setVolumeControlStream(AudioManager.STREAM_NOTIFICATION);
+        mActivity.setVolumeControlStream(AudioManager.STREAM_MUSIC); // STREAM_NOTIFICATION
     }
 }

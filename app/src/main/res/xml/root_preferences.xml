@@ -7,7 +7,6 @@
             app:defaultValue="@string/key_lang_system"
             app:entries="@array/setting_lang_entries"
             app:entryValues="@array/setting_lang_values"
-            app:isPreferenceVisible="false"
             app:key="@string/key_setting_lang"
             app:title="@string/setting_lang_title"
             app:useSimpleSummaryProvider="true" />
@@ -90,7 +89,6 @@
 
         <Preference
             android:icon="@drawable/ic_baseline_coffee_24"
-            app:isPreferenceVisible="false"
             app:key="@string/key_setting_support"
             app:summary="@string/setting_support_summary"
             app:title="@string/setting_support_title" />

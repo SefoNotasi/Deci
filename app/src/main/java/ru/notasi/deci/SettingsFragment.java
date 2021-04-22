@@ -1,8 +1,11 @@
 package ru.notasi.deci;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -39,6 +42,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         setPreferencesFromResource(R.xml.root_preferences, rootKey);
 
         Preference prefLang = findPreference(Constants.KEY_SETTING_LANG);
+        prefLang.setEnabled(false);
         prefLang.setOnPreferenceChangeListener((preference, newValue) -> {
             mRepo.useLang(newValue.toString());
             return true;
@@ -50,7 +54,14 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             return true;
         });
 
+        Preference prefVibroForce = findPreference(Constants.KEY_SETTING_VIBRO_FORCE);
+        Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            prefVibroForce.setEnabled(vibrator.hasAmplitudeControl());
+        } else prefVibroForce.setEnabled(false);
+
         Preference prefSupport = findPreference(Constants.KEY_SETTING_SUPPORT);
+        prefSupport.setEnabled(false);
         prefSupport.setOnPreferenceClickListener(preference -> {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.link_site))));
             return true;
