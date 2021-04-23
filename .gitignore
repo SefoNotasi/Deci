@@ -1,7 +1,8 @@
 # Custom
+# .idea/deploymentTargetDropDown.xml
+.idea
 # Firebase
 google-services.json
-.idea/deploymentTargetDropDown.xml
 
 # Created by https://www.toptal.com/developers/gitignore/api/androidstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=androidstudio
