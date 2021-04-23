@@ -13,10 +13,9 @@ android {
         applicationId "ru.notasi.deci"
         minSdk 16
         targetSdk 30
-        versionCode 4
-        versionName "1.0.3a"
+        versionCode 5
+        versionName "1.0.4"
         multiDexEnabled true // TODO: For firebase-perf.
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -26,10 +25,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     buildFeatures {
         viewBinding true
     }

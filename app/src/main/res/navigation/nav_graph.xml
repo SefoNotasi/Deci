@@ -16,11 +16,6 @@
         tools:layout="@layout/fragment_board" />
 
     <fragment
-        android:id="@+id/nav_info"
-        android:name="ru.notasi.deci.InfoFragment"
-        tools:layout="@layout/fragment_info" />
-
-    <fragment
         android:id="@+id/nav_settings"
         android:name="ru.notasi.deci.SettingsFragment"
         tools:layout="@xml/root_preferences" />
