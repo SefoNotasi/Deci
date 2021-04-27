@@ -13,8 +13,8 @@ android {
         applicationId "ru.notasi.deci"
         minSdk 16
         targetSdk 30
-        versionCode 5
-        versionName "1.0.4"
+        versionCode 7
+        versionName "1.0.6a"
         multiDexEnabled true // TODO: For firebase-perf.
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -55,4 +55,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-perf'
 //    implementation "androidx.multidex:multidex:2.0.1" TODO: Check.
+    implementation "com.android.billingclient:billing:3.0.3"
 }
