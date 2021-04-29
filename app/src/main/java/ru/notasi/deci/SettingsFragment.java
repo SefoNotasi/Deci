@@ -13,14 +13,29 @@ import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
+import com.android.billingclient.api.BillingClient;
+import com.android.billingclient.api.BillingClientStateListener;
+import com.android.billingclient.api.BillingFlowParams;
+import com.android.billingclient.api.BillingResult;
+import com.android.billingclient.api.ConsumeParams;
+import com.android.billingclient.api.ConsumeResponseListener;
+import com.android.billingclient.api.Purchase;
+import com.android.billingclient.api.PurchasesUpdatedListener;
+import com.android.billingclient.api.SkuDetails;
+import com.android.billingclient.api.SkuDetailsParams;
+import com.android.billingclient.api.SkuDetailsResponseListener;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
     private MainActivity mActivity;
     private Repository mRepo;
     private int mExtra;
+    private BillingClient mBillingClient;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -28,6 +43,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         mActivity = (MainActivity) getActivity();
         mRepo = new Repository(mActivity);
         mExtra = 0;
+        initBilling();
 
         ((FloatingActionButton) mActivity.findViewById(R.id.button_share)).hide();
         ((ExtendedFloatingActionButton) mActivity.findViewById(R.id.button_auto)).hide();
@@ -61,9 +77,13 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         } else prefVibroForce.setEnabled(false);
 
         Preference prefSupport = findPreference(Constants.KEY_SETTING_SUPPORT);
-        prefSupport.setEnabled(false);
         prefSupport.setOnPreferenceClickListener(preference -> {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.link_site))));
+            if (mBillingClient.isReady()) {
+                queryProducts();
+            } else {
+                initBilling();
+                mActivity.showToast(mActivity.getString(R.string.toast_support_error));
+            }
             return true;
         });
 
@@ -103,5 +123,101 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             }
             return true;
         });
+    }
+
+    // Initialize a BillingClient.
+    private void initBilling() {
+        PurchasesUpdatedListener purchasesUpdatedListener = new PurchasesUpdatedListener() {
+            @Override
+            public void onPurchasesUpdated(BillingResult billingResult, List<Purchase> purchases) {
+                if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
+                        && purchases != null) {
+                    for (Purchase purchase : purchases) {
+                        handlePurchase(purchase);
+                    }
+                } else if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.USER_CANCELED) {
+                    // Handle an error caused by a user cancelling the purchase flow.
+                    mActivity.showToast(mActivity.getString(R.string.toast_support_cancel));
+                } else {
+                    // Handle any other error codes.
+                    mActivity.showToast(mActivity.getString(R.string.toast_support_error));
+                }
+            }
+        };
+
+        mBillingClient = BillingClient.newBuilder(mActivity)
+                .setListener(purchasesUpdatedListener)
+                .enablePendingPurchases()
+                .build();
+
+        // Establish a connection to Google Play.
+        mBillingClient.startConnection(new BillingClientStateListener() {
+            @Override
+            public void onBillingSetupFinished(BillingResult billingResult) {
+                if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
+                    // The BillingClient is ready. You can query purchases here.
+                }
+            }
+
+            @Override
+            public void onBillingServiceDisconnected() {
+                // Try to restart the connection on the next request to
+                // Google Play by calling the startConnection() method.
+            }
+        });
+    }
+
+    // Show products available to buy.
+    private void queryProducts() {
+        List<String> skuList = new ArrayList<>();
+        skuList.add(Constants.PRODUCT_ID);
+        SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
+        params.setSkusList(skuList).setType(BillingClient.SkuType.INAPP);
+        mBillingClient.querySkuDetailsAsync(params.build(),
+                new SkuDetailsResponseListener() {
+                    @Override
+                    public void onSkuDetailsResponse(BillingResult billingResult,
+                                                     List<SkuDetails> skuDetailsList) {
+                        // Process the result.
+
+                        // Launch the purchase flow.
+                        // An activity reference from which the billing flow will be launched.
+
+                        // Retrieve a value for "skuDetails" by calling querySkuDetailsAsync().
+                        BillingFlowParams billingFlowParams = BillingFlowParams.newBuilder()
+                                .setSkuDetails(skuDetailsList.get(0))
+                                .build();
+
+                        int responseCode = mBillingClient.launchBillingFlow(mActivity, billingFlowParams).getResponseCode();
+
+                        // Handle the result.
+                    }
+                });
+    }
+
+    // Processing purchases.
+    private void handlePurchase(Purchase purchase) {
+        // Purchase retrieved from BillingClient#queryPurchases or your PurchasesUpdatedListener.
+
+        // Verify the purchase.
+        // Ensure entitlement was not already granted for this purchaseToken.
+        // Grant entitlement to the user.
+
+        ConsumeParams consumeParams =
+                ConsumeParams.newBuilder()
+                        .setPurchaseToken(purchase.getPurchaseToken())
+                        .build();
+
+        ConsumeResponseListener listener = new ConsumeResponseListener() {
+            @Override
+            public void onConsumeResponse(BillingResult billingResult, String purchaseToken) {
+                if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
+                    // Handle the success of the consume operation.
+                    mActivity.showToast(mActivity.getString(R.string.toast_support_ok));
+                }
+            }
+        };
+
+        mBillingClient.consumeAsync(consumeParams, listener);
     }
 }

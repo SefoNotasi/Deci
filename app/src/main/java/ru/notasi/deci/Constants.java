@@ -36,14 +36,15 @@ public class Constants {
     public static final String THEME_DAY = "Theme day";
     public static final String THEME_NIGHT = "Theme night";
 
+    public static final String PRODUCT_ID = "coffee";
+    public static final String ANIM_SCALE_X = "scaleX";
+    public static final String INTENT_TYPE_TEXT = "text/plain";
+    public static final String TEXT_ZERO = "0";
+
     public static final String RES_IMAGE_COIN_HEADS = "image_coin_heads";
     public static final String RES_IMAGE_COIN_TAILS = "image_coin_tails";
     public static final String RES_IMAGE_COIN_EDGE = "image_coin_edge";
     public static final String RES_TYPE_DRAWABLE = "drawable";
-
-    public static final String ANIM_SCALE_X = "scaleX";
-    public static final String INTENT_TYPE_TEXT = "text/plain";
-    public static final String TEXT_ZERO = "0";
 
     public static final int ANIM_DURATION_HALF = 150;
     public static final int ANIM_DURATION_FULL = ANIM_DURATION_HALF + ANIM_DURATION_HALF;

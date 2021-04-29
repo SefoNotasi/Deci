@@ -43,6 +43,9 @@
     <string name="toast_sound_off">Звуки ВЫКЛ</string>
     <string name="toast_shake_on">Встряска для броска ВКЛ</string>
     <string name="toast_shake_off">Встряска для броска ВЫКЛ</string>
+    <string name="toast_support_ok">Спасибо</string>
+    <string name="toast_support_cancel">Отменено</string>
+    <string name="toast_support_error">Что-то пошло не так. Пожалуйста, попробуйте ещё раз</string>
     <string name="toast_reset">Прогресс сброшен</string>
     <string name="toast_refresh">Интерфейс обновлён</string>
     <string name="toast_restore">Настройки восстановлены</string>

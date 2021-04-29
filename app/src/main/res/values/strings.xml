@@ -44,6 +44,9 @@
     <string name="toast_sound_off">Sounds OFF</string>
     <string name="toast_shake_on">Shake to flip ON</string>
     <string name="toast_shake_off">Shake to flip OFF</string>
+    <string name="toast_support_ok">Thanks</string>
+    <string name="toast_support_cancel">Canceled</string>
+    <string name="toast_support_error">Something went wrong. Please try again</string>
     <string name="toast_reset">Progress reset</string>
     <string name="toast_refresh">Interface refreshed</string>
     <string name="toast_restore">Settings restored</string>
